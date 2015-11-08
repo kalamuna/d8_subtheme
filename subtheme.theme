@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the subtheme theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function subtheme_preprocess_page(&$variables) {
+  // Get active theme
+  $theme = end(explode("/", \Drupal::theme()->getActiveTheme()->getPath()));
+
+  // Load up the site branding block into a var so we don't need to use a region.
+  $brand = \Drupal\block\Entity\Block::load($theme . '_branding');
+  $variables['branding'] = \Drupal::entityManager()
+  ->getViewBuilder('block')
+  ->view($brand);
+
+  // Load up help block, same as above.
+  $help = \Drupal\block\Entity\Block::load($theme . '_help');
+  $variables['help'] = \Drupal::entityManager()
+  ->getViewBuilder('block')
+  ->view($help);
+}

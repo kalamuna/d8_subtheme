@@ -1,0 +1,14 @@
+name: Subtheme
+type: theme
+description: "Subtheme of Bootstrap"
+core: 8.x
+version: 8.x-0.1
+base theme: bootstrap
+
+regions:
+  content: 'Content'
+  footer: 'Footer'
+
+libraries:
+  - subtheme/global-styling
+  - subtheme/bootstrap
