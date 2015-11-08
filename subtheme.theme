@@ -12,7 +12,8 @@ use Drupal\block\Entity\Block;
  */
 function subtheme_preprocess_page(&$variables) {
   // Get active theme
-  $theme = end(explode("/", \Drupal::theme()->getActiveTheme()->getPath()));
+  $theme = explode("/", \Drupal::theme()->getActiveTheme()->getPath());
+  $theme = end($theme);
 
   // Load up the site branding block into a var so we don't need to use a region.
   $brand = Block::load($theme . '_branding');
