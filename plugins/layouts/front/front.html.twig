@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Template for a single column panel layout.
+ */
+#}
+<div class="panel-display clearfix" {% if css_id %}{{ css_id }}{% endif %}>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 front">
+          <div>{{ content.sectionone }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

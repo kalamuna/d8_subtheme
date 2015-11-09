@@ -1,0 +1,9 @@
+front:
+  label: Front Page
+  category: Subtheme
+  path: plugins/layouts/front
+  template: front
+  icon: front.png
+  regions:
+    sectionone:
+      label: Section One
