@@ -16,12 +16,14 @@ Currently uses custom library bootstrap 3.3.5.
 
 ## Options
 - If you don't want to use the custom BS library included, delete the libraries folder then edit the subtheme.libraries.yml to use the CDN version as follow:
-    bootstrap:
-      version: 3.3.5
-      css:
-        component:
-          //maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css: { type: external, minified: true }
-      js:
-        //maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js: { type: external, minified: true }
+```
+  bootstrap:
+    version: 3.3.5
+    css:
+      component:
+        //maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css: { type: external, minified: true }
+    js:
+      //maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js: { type: external, minified: true }
+```
 
 - Also comes with an optional layout.  You can layouts by following the same structure and adding them to the subtheme.layouts.yml.
